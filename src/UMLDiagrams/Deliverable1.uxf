@@ -1,160 +1,49 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <zoom_level>10</zoom_level>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>370</x>
-      <y>30</y>
-      <w>240</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;JavaDriver&gt;&gt;
-Driver Class
---
--ArrayList&lt;TeacherAbsences&gt; teacherAbsences 
--ArrayList&lt;TeacherSubstitute&gt; teacherSubstitute
-style=wordwrap
---
-(+) readCSV()
-(+) outputCSV()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>140</x>
-      <y>480</y>
-      <w>210</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;JavaClass&gt;&gt;
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>170</x><y>480</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;JavaClass&gt;&gt;
 ShiftProperties
 --
 -String location
 -String time 
--String date</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>140</x>
-      <y>260</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;JavaClass&gt;&gt;
+-String date</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>260</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;JavaClass&gt;&gt;
 TeacherSubstitute
 --
--String name
--ArrayList&lt;ShiftProperties&gt; assignedShifts
+-private final String name
+-private ArrayList&lt;ShiftProperties&gt; assignedShifts
 style=wordwrap
 
 --
 (+) String getName()
 (+) ShiftProperties getShift()
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>600</x>
-      <y>260</y>
-      <w>200</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;JavaClass&gt;&gt;
+(+) void addShift(ShiftProperties shift)
+(+) void removeShift(String time, String date, String location)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>260</y><w>280</w><h>190</h></coordinates><panel_attributes>&lt;&lt;JavaClass&gt;&gt;
 AssignmentLottery
 --
 -String name
 --
 (+) void assignRandom(ArrayList&lt;TeacherAbsences&gt;, ArrayList&lt;TeacherSubstitute&gt;
 style=wordwrap
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>200</y>
-      <w>180</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-</panel_attributes>
-    <additional_attributes>160.0;60.0;160.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>470</x>
-      <y>200</y>
-      <w>30</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>200</y>
-      <w>180</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-</panel_attributes>
-    <additional_attributes>10.0;60.0;10.0;30.0;160.0;30.0;160.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>230</x>
-      <y>440</y>
-      <w>30</w>
-      <h>60</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>370</x>
-      <y>260</y>
-      <w>210</w>
-      <h>190</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;JavaClass&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>180</y><w>230</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>210;80;160;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>180</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>180</y><w>180</w><h>100</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;80;10;50;160;50;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>440</y><w>60</w><h>60</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>40;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>440</y><w>140</w><h>80</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;60;120;60;120;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>40</y><w>310</w><h>150</h></coordinates><panel_attributes>&lt;&lt;JavaDriver&gt;&gt;
+Driver Class
+--
+-ArrayList&lt;TeacherAbsences&gt; teacherAbsences 
+-ArrayList&lt;TeacherSubstitute&gt; teacherSubstitute
+style=wordwrap
+--
+(+) void readCSV(ArrayList&lt;TeacherAbsences&gt; teacherAbsences, String path)
+(+) void outputCSV(ArrayList&lt;TeacherSubstitute&gt; teacherSubstitute)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>260</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;JavaClass&gt;&gt;
 TeacherAbsences
 --
--String name
--ArrayList&lt;ShiftProperties&gt; absentShifts
+-private final String name
+-private ArrayList&lt;ShiftProperties&gt; absentShifts
 style=wordwrap
 
 --
 (+) String getName()
-(+) String getLocation()
-(+) String getTime()
-(+) String getDate()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>340</x>
-      <y>440</y>
-      <w>150</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-</panel_attributes>
-    <additional_attributes>10.0;60.0;130.0;60.0;130.0;10.0</additional_attributes>
-  </element>
-</diagram>
+(+) void addAbsence(ShiftProperty)
+(+) ArrayList&lt;ShiftProperties&gt; getAbsentShifts()</panel_attributes><additional_attributes></additional_attributes></element></diagram>
